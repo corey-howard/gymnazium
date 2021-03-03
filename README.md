@@ -1,45 +1,54 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+USER STORIES
 
-Welcome USER_NAME,
+### Viewing Navigation
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+| USER STORY ID | AS A/AN | I WANT TO BE ABLE TO... | SO THAT I CAN... |
+|:-------------:|:-------:|:----------------------- |:---------------- |
+| 1 | Shopper | View a list of products | Select some to purchase |
+| 2 | Shopper | View individual product details | Identify the price, description, product rating, product image and available sizes |
+| 3 | Shopper | Quickly identify deals, clearance items and special offers | Take advantage of special savings on products i'd like to purchase |
+| 4 | Shopper | Easily view the total of my purchases at any time | Avoid spending too much |
 
-## Gitpod Reminders
+### Registration and User Accounts
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+| USER STORY ID | AS A/AN | I WANT TO BE ABLE TO... | SO THAT I CAN... |
+|:-------------:|:-------:|:----------------------- |:---------------- |
+| 5 | Site User | Easily register for an account | Have a personal account and be able to view my profile |
+| 6 | Site User | Easily login or logout | Access my personal account information |
+| 7 | Site User | Easily recover my password if I forget it | Recover access to my account |
+| 8 | Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
+| 9 | Site User | Have a personalised user profile | View my personaly order history and order confirmations, and save my payment information |
 
-`python3 -m http.server`
+### Sorting and Searching
 
-A blue button should appear to click: *Make Public*,
+| USER STORY ID | AS A/AN | I WANT TO BE ABLE TO... | SO THAT I CAN... |
+|:-------------:|:-------:|:----------------------- |:---------------- |
+| 10 | Shopper | Sort the list of available products | Easily identify the best rated, best priced and catergorically sorted products |
+| 11 | Shopper | Sort a specific category of product | Find the best-priced or best-rated product in a specific category, or sort the products in that category by name |
+| 12 | Shopper | Sort multiple categories of products simultaneously | Find the best-priced or best-rated products across broad categories, such as "Supplements" or "Trainers" |
+| 13 | Shopper | Search for a product by name or description | Find a specific product I would like to purchase |
+| 14 | Shopper | Easily see what i've searched for and the number of results | Quickly decide whether the product I want is available |
 
-Another blue button should appear to click: *Open Browser*.
+### Purchasing and Checkout
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+| USER STORY ID | AS A/AN | I WANT TO BE ABLE TO... | SO THAT I CAN... |
+|:-------------:|:-------:|:----------------------- |:---------------- |
+| 15 | Shopper | Easily select the size and quantity of a product when purchasing it | Ensure I don't accidentally select the wrong product, quantity or size |
+| 16 | Shopper | View items in my bag to be purchased | Identify the total cost of my purchase and all I items I will receive |
+| 17 | Shopper | Adjust the quantity of individual items in my bag | Easily make changes to my purchase before checkout |
+| 18 | Shopper | Easily enter my payment information | Checkout quickly and with no hassles |
+| 19 | Shopper | Feel my personaly and payment information is safe and secure | Confirdently provide the needed information to make a purchase |
+| 20 | Shopper | View and order confirmation after checkout | Verify that I haven't made any mistakes |
+| 21 | Shopper | Receive an order confirmation after checking out | Keep the confirmation of what i've purchased for my records |
 
-A blue button should appear to click: *Make Public*,
+### Admin and Store Management
 
-Another blue button should appear to click: *Open Browser*.
+| USER STORY ID | AS A/AN | I WANT TO BE ABLE TO... | SO THAT I CAN... |
+|:-------------:|:-------:|:----------------------- |:---------------- |
+| 22 | Store Owner | Add a product | Add new items to my store |
+| 23 | Store Owner | Edit/update a product | Change product prices, descriptions, images and other product criteria |
+| 24 | Store Owner | Delete a product | Remove items that are no longer for sale |
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
