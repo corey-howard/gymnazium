@@ -50,5 +50,10 @@ USER STORIES
 | 24 | Store Owner | Delete a product | Remove items that are no longer for sale |
 
 
+IMAGE LINKS
+https://www.muscleblitz.com/gym-background-wallpaper-8
+https://www.shutterstock.com/
 
+FONTS
+https://fonts.google.com/
 
