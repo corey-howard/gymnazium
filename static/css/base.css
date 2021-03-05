@@ -10,7 +10,7 @@ body {
     font-family: 'Lato';
 }
 
-/* from Bulma, allows font awesome icons to always stay centered and consistently sized */
+/* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -56,6 +56,10 @@ body {
     border: 1px solid black !important;
 }
 
+.bg-black {
+    background: #000 !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -79,4 +83,3 @@ body {
         padding-top: 164px;
     }
 }
-
