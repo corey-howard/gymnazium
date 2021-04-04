@@ -1,1 +1,1 @@
-web: gunicorn gymnazium .wsgi:application
+web: gunicorn gymnazium.wsgi:application
