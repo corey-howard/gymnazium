@@ -18,38 +18,68 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Clothing
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="carp-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Carp
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'products' %}?category=activewear,essentials" class="dropdown-item">Activewear &amp; Essentials</a>
-                <a href="{% url 'products' %}?category=jeans" class="dropdown-item">Jeans</a>
-                <a href="{% url 'products' %}?category=shirts" class="dropdown-item">Shirts</a>
-                <a href="{% url 'products' %}?category=activewear,essentials,jeans,shirts" class="dropdown-item">All Clothing</a>
+            <div class="dropdown-menu border-0" aria-labelledby="carp-link">
+                <a href="{% url 'products' %}?category=carp_bait_additives" class="dropdown-item">Bait &amp; Additives</a>
+                <a href="{% url 'products' %}?category=carp_reels" class="dropdown-item">Reels</a>
+                <a href="{% url 'products' %}?category=carp_rods" class="dropdown-item">Rods</a>
+                <a href="{% url 'products' %}?category=carp_rod_reel_combo" class="dropdown-item">Rod & Reel Combo</a>
+                <a href="{% url 'products' %}?category=carp_terminal_tackle" class="dropdown-item">Terminal Tackle</a>
+                <a href="{% url 'products' %}?category=carp_bait_additives,carp_reels,carp_rods,carp_rod_reel_combo,carp_terminal_tackle"
+                    class="dropdown-item">All Carp</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Homeware
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="coarse-match-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Coarse & Match
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Bed &amp; Bath</a>
-                <a href="{% url 'products' %}?category=kitchen_dining" class="dropdown-item">Kitchen &amp; Dining</a>
-                <a href="{% url 'products' %}?category=bed_bath,kitchen_dining" class="dropdown-item">All Homeware</a>
+            <div class="dropdown-menu border-0" aria-labelledby="coarse-match-link">
+                <a href="{% url 'products' %}?category=coarse_bait_additives" class="dropdown-item">Bait &amp; Additives</a>
+                <a href="{% url 'products' %}?category=coarse_reels" class="dropdown-item">Reels</a>
+                <a href="{% url 'products' %}?category=coarse_rods" class="dropdown-item">Rods</a>
+                <a href="{% url 'products' %}?category=coarse_rod_reel_combo" class="dropdown-item">Rod & Reel Combo</a>
+                <a href="{% url 'products' %}?category=coarse_terminal_tackle" class="dropdown-item">Terminal Tackle</a>
+                <a href="{% url 'products' %}?category=coarse_bait_additives,coarse_reels,coarse_rods,coarse_rod_reel_combo,coarse_terminal_tackle"
+                    class="dropdown-item">All Coarse & Match</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="equipment-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Equipment
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
-                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
-                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
+            <div class="dropdown-menu border-0" aria-labelledby="equipment-link">
+                <a href="{% url 'products' %}?category=bite_alarms" class="dropdown-item">Bite Alarms</a>
+                <a href="{% url 'products' %}?category=bivvies_shelters" class="dropdown-item">Bivvies & Shelters</a>
+                <a href="{% url 'products' %}?category=chairs" class="dropdown-item">Chairs</a>
+                <a href="{% url 'products' %}?category=clothing" class="dropdown-item">Clothing</a>
+                <a href="{% url 'products' %}?category=line" class="dropdown-item">Line</a>
+                <a href="{% url 'products' %}?category=luggage" class="dropdown-item">Luggage</a>
+                <a href="{% url 'products' %}?category=nets" class="dropdown-item">Nets</a>
+                <a href="{% url 'products' %}?category=rod_supports" class="dropdown-item">Rod Supports</a>
+                <a href="{% url 'products' %}?category=scales" class="dropdown-item">Scales</a>
+                <a href="{% url 'products' %}?category=sleeping_bags" class="dropdown-item">Sleeping Bags</a>
+                <a href="{% url 'products' %}?category=tackle_boxes" class="dropdown-item">Tackle Boxes</a>
+                <a href="{% url 'products' %}?category=tools" class="dropdown-item">Tools</a>
+                <a href="{% url 'products' %}?category=waders_boots" class="dropdown-item">Waders & Boots</a>
+                <a href="{% url 'products' %}?category=bite_alarms,bivvies_shelters,chairs,clothing,luggage,nets,rod_supports,scales,sleeping_bags,tackle_boxes,tools,waders_boots"
+                    class="dropdown-item">All Equipment</a>
             </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="fisheries-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Fisheries
+            </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="blog-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Blog
+            </a>
         </li>
     </ul>
 </div>
