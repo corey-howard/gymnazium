@@ -3,18 +3,25 @@ from django.contrib.auth.models import User
 
 
 STATUS = (
-    (0,"Draft"),
-    (1,"Publish")
+    (0, "Draft"),
+    (1, "Publish")
 )
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
-    updated_on = models.DateTimeField(auto_now= True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
+    updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+
+    # Media
+    image_main = models.ImageField(null=True, blank=True)
+    image_1 = models.ImageField(null=True, blank=True)
+    image_2 = models.ImageField(null=True, blank=True)
+    video = models.URLField(null=True, blank=True)
 
     class Meta:
         ordering = ['-created_on']

@@ -2,16 +2,18 @@ from django.shortcuts import render
 from django.views import generic
 from .models import Post
 
-class events(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'events.html'
 
-    def get(self, request):
-        return render(request, 'events/events.html')
+def events(request):
+    """ A view to return the events page """
+    posts = Post.objects.all()
+    context = {'posts': posts}
 
-class events_detail(generic.DetailView):
-    model = Post
-    template_name = 'events_detail.html'
+    return render(request, "events/events.html", context)
 
-    def get(self, request):
-        return render(request, 'events/events_detail.html')
+
+def events_detail(request, slug):
+    """ A view to return the events detail page """
+    posts = Post.objects.all()
+    context = {'posts': posts}
+
+    return render(request, "events/events_detail.html", context)
