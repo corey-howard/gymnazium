@@ -597,6 +597,9 @@ https://www.shutterstock.com/
 BLOG IMAGES
 http://www.fishomania.net/gallery/nggallery/page/2
 https://www.forensisgroup.com/can-an-environmental-expert-testify-on-tclp-in-a-sewage-discharge-case/
+https://www.thetimes.co.uk/article/why-i-want-the-monster-fish-story-to-be-a-whopper-k67smb7pp
+https://www.thetimes.co.uk/article/hugo-rifkind-reviews-mortimer-and-whitehouse-gone-fishing-the-pair-use-humour-like-chimps-use-gentle-grooming-wgdt5cxjt
+https://www.payszpz.ga/products.aspx?cname=big+boilies&cid=8&xi=4&xc=20&pr=29.99
 
 PRODUCT IMAGE LINKS
 Manilla Boilies: https://www-anglingdirect-co.uk.imgeng.in/media/catalog/product/cache/e2e09cb9e3f3e81e7a4cf8dbd1821470/s/t/sticky_baits_manilla_shelf_life_boilies.jpg

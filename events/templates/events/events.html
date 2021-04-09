@@ -21,14 +21,15 @@
         <!-- Events Articles -->
         <div class="row">
             {% for post in posts %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4 mt-4">
                     <div class="card h-100 mb-4">
                         <img class="card-img-top" src="{{ post.image_main.url }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{ post.title }}</h5>
-                            <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on }}</p>
                             <p class="card-text">{{ post.content|slice:":180 "}}</p>
-                            <a href="{% url 'events_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                            <a href="{% url 'events_detail' post.slug  %}" class="btn btn-success">Read More &rarr;</a>
+                        </div>
+                        <div class="card-footer"><p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on }}</p>
                         </div>
                     </div>
                 </div>

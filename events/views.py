@@ -13,7 +13,7 @@ def events(request):
 
 def events_detail(request, slug):
     """ A view to return the events detail page """
-    posts = Post.objects.all()
-    context = {'posts': posts}
+    post = Post.objects.get(slug=slug)
+    context = {'post': post}
 
     return render(request, "events/events_detail.html", context)
