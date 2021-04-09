@@ -535,6 +535,10 @@ Cockney rhyming slang terms
 
 https://happy2movelondon.co.uk/complete-dictionary-of-cockney-rhyming-slang/
 
+Blog Articles used from:
+
+https://anglingtrust.net/news/
+
 ### Media
 
 Responsive Design Checker
@@ -589,6 +593,10 @@ Lastly, to my peers on Slack and LinkedIn, thank you for troubleshooting tips, c
 IMAGE LINKS
 https://www.muscleblitz.com/gym-background-wallpaper-8
 https://www.shutterstock.com/
+
+BLOG IMAGES
+http://www.fishomania.net/gallery/nggallery/page/2
+https://www.forensisgroup.com/can-an-environmental-expert-testify-on-tclp-in-a-sewage-discharge-case/
 
 PRODUCT IMAGE LINKS
 Manilla Boilies: https://www-anglingdirect-co.uk.imgeng.in/media/catalog/product/cache/e2e09cb9e3f3e81e7a4cf8dbd1821470/s/t/sticky_baits_manilla_shelf_life_boilies.jpg
