@@ -531,6 +531,10 @@ swayed me to use instead of Bootstrap.
 For the login/creating user and profile sections of this project I did require help in achieving this by refering to the tutorial video
 as I could not think of another way of achieving this.
 
+Home page h1 fade in:
+
+https://codepen.io/shawkdsn/pen/haGzE
+
 Cockney rhyming slang terms
 
 https://happy2movelondon.co.uk/complete-dictionary-of-cockney-rhyming-slang/
@@ -600,6 +604,9 @@ https://www.forensisgroup.com/can-an-environmental-expert-testify-on-tclp-in-a-s
 https://www.thetimes.co.uk/article/why-i-want-the-monster-fish-story-to-be-a-whopper-k67smb7pp
 https://www.thetimes.co.uk/article/hugo-rifkind-reviews-mortimer-and-whitehouse-gone-fishing-the-pair-use-humour-like-chimps-use-gentle-grooming-wgdt5cxjt
 https://www.payszpz.ga/products.aspx?cname=big+boilies&cid=8&xi=4&xc=20&pr=29.99
+https://www.gov.uk/government/news/take-care-when-buying-your-fishing-licence-online
+https://www.treehugger.com/largest-freshwater-fish-in-the-world-4869287
+https://tnc.news/2020/06/29/environment-minister-to-let-municipalities-dump-raw-sewage-into-waterways-until-2040/
 
 PRODUCT IMAGE LINKS
 Manilla Boilies: https://www-anglingdirect-co.uk.imgeng.in/media/catalog/product/cache/e2e09cb9e3f3e81e7a4cf8dbd1821470/s/t/sticky_baits_manilla_shelf_life_boilies.jpg

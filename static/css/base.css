@@ -27,11 +27,119 @@ body {
     width: fit-content;
 }
 
+/* ------------------------------- Home Page */
+
 .shop-now-button {
     background: black;
     color: white;
     min-width: 260px;
 }
+
+.slogan {
+    text-shadow: 2px 2px #fff;
+}
+
+.animate-reveal {
+  /*font: bold 1.5em sans-serif;*/
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+     -moz-animation: reveal 1s ease-in 1 normal forwards;
+       -o-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+          animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.animate-first {
+  -webkit-animation-delay: 0;
+     -moz-animation-delay: 0;
+       -o-animation-delay: 0;
+          animation-delay: 0;
+}
+
+.animate-second {
+  -webkit-animation-delay: 500ms;
+     -moz-animation-delay: 500ms;
+       -o-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.animate-third {
+  -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-moz-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-o-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* ------------------------------- Site Buttons */
 
 .btn-black {
     background: black;
@@ -104,6 +212,28 @@ a.category-badge > span.badge:hover {
 
 input[name='q']::placeholder {
     color: #aab7c4;
+}
+
+/* ------------------------------- Events Cards */
+
+.card {
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+/* ------------------------------- Events DetailsCards */
+
+.card-detail {
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgb(0 0 0 / 8%), 0 0 6px rgb(0 0 0 / 5%);
 }
 
 /* ------------------------------- bootstrap toasts */
