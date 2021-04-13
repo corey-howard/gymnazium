@@ -236,6 +236,34 @@ input[name='q']::placeholder {
     box-shadow: 0 6px 10px rgb(0 0 0 / 8%), 0 0 6px rgb(0 0 0 / 5%);
 }
 
+/* ------------------------------- Google Maps */
+
+.map {
+    height: 450px;
+    position: relative;         
+}
+
+.map iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* ------------------------------- Social Links */
+
+.social-links {
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 14px;
+    padding: 0;
+}
+
+.social-links i {
+    color: #4caf50;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {

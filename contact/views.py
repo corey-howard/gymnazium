@@ -6,9 +6,8 @@ from django.core.mail import send_mail
 
 def contact(request):
     """
-    A view to return the contact page, using the contact model here !!
+    A view to return the contact page
     """
-    print("test")
 
     if request.method == "POST":
 
