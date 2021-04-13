@@ -573,6 +573,10 @@ Device mockup image
 
 http://ami.responsivedesign.is/#
 
+Google Maps
+
+https://www.google.co.uk/maps
+
 ### Research Tools/Help Guides
 
 PEP 8 compliance
