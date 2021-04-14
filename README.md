@@ -12,14 +12,12 @@ all this, anglers visiting the site can also look up places to fish. They can do
 stored within the locations section of the site, each fishery has a description of the location including; breeds of fish there, price list,
 night fishing permitted or not, amenities and much more.
 
-I decided to create this site 
-
-I decided to make this site because I have always had a keen interest in Cockney Rhyming Slang and it's origins.
-The language is believed to have been created for a few reasons, some of which include; market traders wanting to converse between
-each other without onlookers knowing what is being said, providing a sense of community by having their own language only
-locals knew, but the most common reason is known to be for criminals to communicate with each other without Police
-knowing what is being said. What I find fascinating is that it is still used to this day, there are so many terms that we would all
-use in our day to day conversations, not knowing that it is derived from Cockney Rhyming Slang. 
+I decided to create this site because of my fond interest in angling and what the sport can do for people's wellbeing. Fishing is a sport
+that is primarily carried out as an individual but it doesn't stop you from going with friends and family together. It is a fantastic
+opportunity to meeet up with friends, converse and talk about what's going on in your life whilst enjoying the great outdoors. I wanted this
+site to be more than a shop, and to reflect other aspects of the sport, which is where the events (what's happening in the fishing world) and
+locations sections came in. The aim would be to eventually have this site be the hub for all things angling and the got to place to shop,
+locate and connect.
 
 ## Table of Contents
 
@@ -57,17 +55,31 @@ use in our day to day conversations, not knowing that it is derived from Cockney
 
 ---
 
-The purpose of this site is to create a dictionary of rhyming slang terms and their definitions, potential users may have heard 
-a term that they are not familiar with and can find it on this site. Users are encouraged to make accounts and add terms/definitions 
-to the site to expand on the ever-growing database. The site should be simplistic and have the information that the user is searching
-for straight in front of them on the first page. There should also be minimal content to read from the start, as the user
-has come to this site for a quick answer to a question and are not there to read a backstory to the site's existence.
+The purpose of this site is primarily a fully functioning ecommerce store that sells fishing gear and supplies. Users will be able to
+find products via browsing through clearly defined categories, alternatively can use the search bar to search for key words of the product
+they are looking for. Users can add products to the basket which will have a running price total for the user to see whilst they continue
+to browse the site, once in the checkout page the user will be able to delete or ammend quantities of products in the bag. The user can then
+pay for their products via a secure Stripe payment service, by filling in delivery address and contact information along with payment details.
+The user will have the option to save their information for next time they make a purchase and the fields will be prefilled next time, this
+can only be done if the user has signed up and made an account already, alternatively they can be directed to the sign up page mid checkout.
+Once the user has successfully completed the checkout process, an email will be automatically sent to the customer that details their order.
+Users who have signed up for an account can not only save their details for future purchases but also can view their profile, where their
+previous purchase history can be viewed. The site should be easy to navigate and clear to the user where to go, with a chain of events for
+more complicated functions such as purchasing products there should be prompts and clear indications as to where to go next.
 
-As the site owner, going forward, it would be great to turn it into more of a platform for socialising. Perhaps adding a forum/chat
-funtionality. It could become a place for users to converse about London life, share experiences and of course continue to expand on
-the Cockney Rhyming Slang dictionary. These actions can be implemented along side the main focus of the website being a dictionary, to
-perhaps bring in revenue by eventually advertising tourist attractions and forwarding users to ticket sales for these attractions as
-an example.
+Away from the ecommerce side of the site, the secondary purpose of the site is to provide information for anglers such as current events.
+Users will be able to navigate to the events section and read articles relevant to the sport. Going forward a comments section will be
+available so users can comment and converse with other members of the site. There is also a contact page for users to get in touch with the
+site owner and send a message/feedback/ask a question. The sent messages are sent to the site owner who will be notified of a message via
+email which prompts the owner to view the message in the site admin. The site should be appealing for anglers, so the use of colour and
+images should be relevant and appealing to the users who will predominantly be people interested in angling.
+
+As the site owner, going forward, it would be great to turn this site into more of a platform for socialising. This could be achieved
+via the comments section of posts in the events page, especially if posts are created for specific discussions, i.e Best bait to use for
+catching Carp or Top locations for fishing in the South East of England and then users can comment and participate via that post. The aim
+would be to make this site the go to place for all things angling, and the first site anglers think of for serving their needs. To add
+further revenue, the site could incorporate some relevant advertising and perhaps with a fishing location section set up, the site could
+provide a booking platform for fisheries and take commission from each booking.
 
 #### User Stories
 
@@ -79,46 +91,63 @@ an example.
 | 2 | Shopper | View individual product details | Identify the price, description, product rating, product image and available sizes |
 | 3 | Shopper | Quickly identify deals, clearance items and special offers | Take advantage of special savings on products i'd like to purchase |
 | 4 | Shopper | Easily view the total of my purchases at any time | Avoid spending too much |
+| 5 | Site User | Easily locate where event articles will be | Go straight to the articles |
+| 6 | Site User | Easily find the Fisheries section | View fishing locations quickly |
 
 ### Registration and User Accounts
 
 | USER STORY ID | AS A/AN | I WANT TO BE ABLE TO... | SO THAT I CAN... |
 |:-------------:|:-------:|:----------------------- |:---------------- |
-| 5 | Site User | Easily register for an account | Have a personal account and be able to view my profile |
-| 6 | Site User | Easily login or logout | Access my personal account information |
-| 7 | Site User | Easily recover my password if I forget it | Recover access to my account |
-| 8 | Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
-| 9 | Site User | Have a personalised user profile | View my personaly order history and order confirmations, and save my payment information |
+| 7 | Site User | Easily register for an account | Have a personal account and be able to view my profile |
+| 8 | Site User | Easily login or logout | Access my personal account information |
+| 9 | Site User | Easily recover my password if I forget it | Recover access to my account |
+| 10 | Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
+| 11 | Site User | Have a personalised user profile | View my personaly order history and order confirmations, and save my payment information |
+
+### Events and Fisheries
+
+| USER STORY ID | AS A/AN | I WANT TO BE ABLE TO... | SO THAT I CAN... |
+|:-------------:|:-------:|:----------------------- |:---------------- |
+| 12 | Site User | Easily view event posts | Keep up to date with what is happening in the angling world |
+| 13 | Site User | Be able to add comments to posts | Converse with other members of the site to share tips and advice |
+| 14 | Site User | Easily view fisheries around the UK | Plan where I will go on my next fishing trip |
+| 15 | Site User | See in detail what each fishery location has to offer | See what fish are there, whether night fishing available and amenities |
 
 ### Sorting and Searching
 
 | USER STORY ID | AS A/AN | I WANT TO BE ABLE TO... | SO THAT I CAN... |
 |:-------------:|:-------:|:----------------------- |:---------------- |
-| 10 | Shopper | Sort the list of available products | Easily identify the best rated, best priced and catergorically sorted products |
-| 11 | Shopper | Sort a specific category of product | Find the best-priced or best-rated product in a specific category, or sort the products in that category by name |
-| 12 | Shopper | Sort multiple categories of products simultaneously | Find the best-priced or best-rated products across broad categories, such as "Supplements" or "Trainers" |
-| 13 | Shopper | Search for a product by name or description | Find a specific product I would like to purchase |
-| 14 | Shopper | Easily see what i've searched for and the number of results | Quickly decide whether the product I want is available |
+| 16 | Shopper | Sort the list of available products | Easily identify the best rated, best priced and catergorically sorted products |
+| 17 | Shopper | Sort a specific category of product | Find the best-priced or best-rated product in a specific category, or sort the products in that category by name |
+| 18 | Shopper | Sort multiple categories of products simultaneously | Find the best-priced or best-rated products across broad categories, such as "Supplements" or "Trainers" |
+| 19 | Shopper | Search for a product by name or description | Find a specific product I would like to purchase |
+| 20 | Shopper | Easily see what i've searched for and the number of results | Quickly decide whether the product I want is available |
 
 ### Purchasing and Checkout
 
 | USER STORY ID | AS A/AN | I WANT TO BE ABLE TO... | SO THAT I CAN... |
 |:-------------:|:-------:|:----------------------- |:---------------- |
-| 15 | Shopper | Easily select the size and quantity of a product when purchasing it | Ensure I don't accidentally select the wrong product, quantity or size |
-| 16 | Shopper | View items in my bag to be purchased | Identify the total cost of my purchase and all I items I will receive |
-| 17 | Shopper | Adjust the quantity of individual items in my bag | Easily make changes to my purchase before checkout |
-| 18 | Shopper | Easily enter my payment information | Checkout quickly and with no hassles |
-| 19 | Shopper | Feel my personaly and payment information is safe and secure | Confirdently provide the needed information to make a purchase |
-| 20 | Shopper | View and order confirmation after checkout | Verify that I haven't made any mistakes |
-| 21 | Shopper | Receive an order confirmation after checking out | Keep the confirmation of what i've purchased for my records |
+| 21 | Shopper | Easily select the size and quantity of a product when purchasing it | Ensure I don't accidentally select the wrong product, quantity or size |
+| 22 | Shopper | View items in my bag to be purchased | Identify the total cost of my purchase and all I items I will receive |
+| 23 | Shopper | Adjust the quantity of individual items in my bag | Easily make changes to my purchase before checkout |
+| 24 | Shopper | Easily enter my payment information | Checkout quickly and with no hassles |
+| 25 | Shopper | Feel my personaly and payment information is safe and secure | Confirdently provide the needed information to make a purchase |
+| 26 | Shopper | View and order confirmation after checkout | Verify that I haven't made any mistakes |
+| 27 | Shopper | Receive an order confirmation after checking out | Keep the confirmation of what i've purchased for my records |
 
 ### Admin and Store Management
 
 | USER STORY ID | AS A/AN | I WANT TO BE ABLE TO... | SO THAT I CAN... |
 |:-------------:|:-------:|:----------------------- |:---------------- |
-| 22 | Store Owner | Add a product | Add new items to my store |
-| 23 | Store Owner | Edit/update a product | Change product prices, descriptions, images and other product criteria |
-| 24 | Store Owner | Delete a product | Remove items that are no longer for sale |
+| 28 | Site Owner | Add a product | Add new items to my store |
+| 29 | Site Owner | Edit/update a product | Change product prices, descriptions, images and other product criteria |
+| 30 | Site Owner | Delete a product | Remove items that are no longer for sale |
+| 31 | Site Owner | Add events posts | Provide up to date events for the sites users |
+| 32 | Site Owner | Access contact form message requests | View the message and reply to the user accordingly |
+
+* Many of the user stories have been taken from the Code Institute full stack framework tutorial as it was also creating
+an ecommerce site.
+
 ---
 
 ### Scope Plane
@@ -131,18 +160,17 @@ an example.
 
 #### Content Requirements
 
-* The user will be immediately faced with a simplistic site, with all the slang terms on the first page they reach.
-* There will be easy to follow navigation with limited pages to choose depending on if the user is logged in or not.
-* The Background will be fitting for the sites purpose and not distracting.
+* The user will be immediately faced with a simplistic site, with clear navigational buttons to go to where the want.
+* There will be easy to follow navigation with categories and search bar to find products.
+* The Background will be fitting for the sites purpose.
 * The colour scheme and font choices used throughout the site will be complimentary of each other and display clearly for users
 on all devices. The aim is not to be flambouyant in this case, the purpose is to provide clear and concise content for the user
 and maintain consistent at all times.
-* With simplicity in mind and taking into consideration all the points above, the site still needs to fill like it belongs to
-it's purpose and makes sense. For example, it is a dictionary for a language originating from London, so a bright, rural theme/feel
-probably wouldn't fit.
-* The site will include it's main funtionality of being a dictionary search tool and, for users to be able to create accounts and
-add slang terms themselves from the initial site creation. Future content could include forums, chat functionalities, advertising
-or even sale of merchandise.
+* The site will consist of everything set out in the user stories minus the ability for users to make comments on events posts
+and Fisheries section.
+* Due to time constraints the fisheries section was not able to be completed, but will be added when deadlines are not a factor.
+* The comments section for the events page was trickier to implement than first thought, however this will be implemented when
+more time is available going forward.
 
 ---
 
@@ -150,8 +178,7 @@ or even sale of merchandise.
 
 ---
 
-The site has been structured with the user in mind from the offset. Simplicity has been reiterated a lot so far but it has been
-at the forefront of every idea and design aspect for this site. To achieve this, I decided to use Materialize as I think it
+The site has been structured with the user in mind from the offset. To achieve this, Bootstrap was used as I think it
 provides very straight-forward styling that is easily achieved. I will explain in more detail the structure of each component that
 makes up the site in the following Skeleton Plane section, as I believe it links better with how the information is represented
 via the wireframes. However, the basic structure logistically can be described in the following priorities:
