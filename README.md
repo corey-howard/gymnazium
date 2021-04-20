@@ -183,24 +183,35 @@ provides very straight-forward styling that is easily achieved. I will explain i
 makes up the site in the following Skeleton Plane section, as I believe it links better with how the information is represented
 via the wireframes. However, the basic structure logistically can be described in the following priorities:
 
-1. The first page that is presented to the user is the Home page, which contains all the slang terms they have come to find.
-2. The first page should be designed in such a way that makes it clear what it is straightaway.
-3. The logo and navigation bar will be present at the very top of the page horizontally, logo central, navigation buttons to the right
-with the most commonly used buttons/pages displayed left to right.
-4. As the name of the site isn't inherently clear as to what the site does, the heading will be displayed directly below the top nav-wrapper.
-5. An alphabet that includes href links for users to navigate to slang terms beginning with the letter they choose will be displayed
-next, before the dictionary begins.
-6. The dictionary will then be displayed, with all terms separated by large headers of the corresponding starting letter to the term.
-The slang term will come first, followed by it's definition. Each slang term will be within a materialize collapsable which displays
-more information when clicked on, such as the name of the user who created the entry and the date it was created on.
-7. The next page along in the navigation will be the Log In page, for user to log in and add slang entries..
-8. The next page along in the navigation will be the register page, for users who wish to add slang entries to the site, they must
-register an account to do this.
-9. When a user is logged in the Add Slang page will appear on the navigation bar, this is to prevent users adding slang entries without
-an account.
-10. The other page that is available to users is their Profile page, here will be an explanation as to what a user has access to on the
-site. Also available are navagation buttons to return back to the Home page or the option to Add Slang.
-11. Lastly, the Log Out button will be available at the end of the navigation bar, only for users that are logged in, to log out.
+1. The first page that is presented to the user is the Home page, which contains main hero image and navigation bar to the rest of the sites
+pages.
+2. The first page should be designed in such a way that makes it clear what it is straightaway, in this instance a relatable image to angling.
+3. The logo and navigation bar will be present at the very top of the page horizontally, logo offset to the left, with search bar top middle,
+the shopping basket and profile page icons will be present top left of the screen and navigation buttons central to page below logo and search
+bar. On smaller devices, the nav bar will be changed to burger style navigation menu, and be present top left of page. The search bar will
+reduce down to a search icon to be clicked and then the search bar will appear. The search, profile and shopping basket icons will now appear
+at the top of the page central on mobile devices.
+4. The navigation menu priority order is important, which is why it will be ordered by importance and relevance.
+5. On top of the home page background image will be a 'Shop Now' button which is a clear indication that the site is primarily an ecommerce
+store and will take the user to the products page. However above the button is the sites slogan of Shop Locate Connect, which shows the other
+purposes of the site, which in this case are part of future developments currently.
+6. All products navigation button provides a drop down to direct users to a page that displays all the sites products in an order requeted
+by the user.
+7. The navigation buttons Carp, Coarse & Match and Equipment, all provide drop down sub pages that link to the different categories of
+products asociated with that page.
+8. The Events navigation button will direct users to the Events page which displays articles of news events and competitions around the UK
+focused solely on aspects of fishing only.
+9. The Contact navigation button takes the user to the Contact page where they can get in touch with the business and send a message/question.
+It also displays the location via Google Maps for them to get in contact directly and links to social media pages that are yet to be created.
+10. My Account section will provide users with either the option to log in or register for an account on the site, once logged in, the My
+Account button will change to different options, depending if superuser is logged in will display product management option, alternatively,
+normal account holders will have the options of viewing their profile or logging out.
+12. The shopping basket icon, will hold any products that the user chooses to add to their basket, whilst constantly providing a total price.
+
+The diagram below shows how the pages of the site link with one another and what pages you can get to and from depending on the page you are
+focusing on. Chart made using [Lucid Charts](https://www.lucidchart.com/pages/).
+
+![Navigation Flow Chart](media/ms4_flow_chart.jpg)
 
 ---
 
@@ -209,25 +220,27 @@ site. Also available are navagation buttons to return back to the Home page or t
 ---
 
 I used Wireframes when designing how the information will be represented and how the user will be able to navigate across the site.
-Once the wireframes were created, I had a clear direction on where to begin creating the site and what pages should be created thereafter.
-As the contents of the dictionary and the information of the sites user accounts are stored as data and retrieved from a database, 
-I also designed how the database would work for the site. I decided to use MongoDB which is a NoSQL document-oriented database.
-The database is quite simple and named cockney_rhyming_slang, it is comprised of two collections, one named words and the other users. 
-All the slang entries created are stored/retrieved in the words collections and all the user account details are stored/retrieved in the 
-users collection. The structuring of these collections can be viewed in the images below:
+Once the wireframes were created, I had a clear drirection on where to begin creating the site and what pages should be created thereafter.
+The wireframes for this site can be found here:
 
-cockney_rhyming_slang.words:
 
-![Words Collection](static/images/words-collection.png)
+The site requires a database to hold much of it's data such as the product information/images, event articles, etc, the database used is the
+Postgres relational database with a data model. However, due to this project being deployed using Heroku, I was able to use SQLite during
+development and Heroku Postgres when deployed. All the data is contained within the Postgres database and the appropriate models have been 
+created.
 
-cockney_rhyming_slang.users:
-(Password manipulated so cannot be seen)
+The below diagram explains the structure of my database and how it conforms:
 
-![Users Collection](static/images/users-collection.png)
+
 
 #### Wireframes
 
-You can find the pdf file to my Wireframes in the Wireframes folder of this repository.
+Prior to starting this project I created Wireframes using an extension on Microsoft Powerpoint. Wireframes helped to plan and visualise how
+the site would look before writing any code and also was a way to plan out how the apps and pages within the site will link to each other.
+This saved a lot of time as it was quicker to plan and make changes to wireframe designs than experimenting whilst coding. Although my project
+idea changed halfway through from a gym site to Fishing site, the wireframes were practically the same apart from the additional models Away
+from the ecommerce part of the site so my wireframes were changed to reflect this. You can find the pdf file to my Wireframes in the
+Wireframes folder of this repository.
 
 ---
 
@@ -235,22 +248,36 @@ You can find the pdf file to my Wireframes in the Wireframes folder of this repo
 
 ---
 
-I've stated previously that I decided to use Materialize for styling this site along with utilising many of the options it had to
-offer. When deciding on Typography I wanted to have a font that could be conceived as 'handwritten', as it is a site for words and
-in a dictionary function, I thought a handwritten font would be quite apt. I used google fonts to find a suitable font that followed
-the criteria I set out but was also clear to read, I eventually decided on the font [Delius](https://fonts.google.com/specimen/Delius?selection.family=Delius).
+I've stated previously that I decided to use Bootstrap for styling this site along with utilising many of the options it had to offer,
+also of course cusomised css styling was used too. When deciding on Typography I wanted a font and font weight that was clear and legible
+throughout the site and did not clash with backgrounds and colours used. It was also important that the same font was used consistently
+throughout the site as to conform with industry standards. I researched other angling sites similar to my project and made note of fonts
+that they used, in the end I settled on using a font from Google fonts, [Roboto](https://fonts.google.com/specimen/Roboto?selection.family=Roboto).
 
-I decided on a background that would match the urban feel I was trying to achieve, so I searched for London brick wall backgrounds and
-eventually found one I thought was suitable.
+Where the background is concerned, on the home page I decided I wanted an eye catching background image that would span the whole page minus
+the header section. I searched Shutterstock for idylic fishing sites that also displayed fishing being carried out at the same time, by doing
+this, hopefully acts as a prompt for users to want to go fishing/purchase the supplies they need to go fishing. Throughout the rest of the site
+I decided a white background more than sufficed what was needed and fir the purpose of the site. As predominantly the site is for ecommerce,
+the white background makes the products stand out on the page. The same can be said for other parts of the site such as the events page, the
+articles all have an image element and they stand out very nicely on a white background.
 
-I tried to choose a colour scheme that would compliment the background but also so they did not clash, whilst making sure all content was
-clear and visible. I ended up using materialize colour of blue-gray darken-1, Gray is neutral and tends to be quite a popular choice in
-web design so it fit my criteria. I went with a traditional white font throughout the site apart from where backgrounds are white, I chose
-the contrasting blue-gray. I also have multiple flash messages that appear throughout the site, I wanted these to be bold and stand out well,
-so I chose the background colour of these to be yellow accent-4 with white font.
+Due to the background being predominantly white it helped decide on colour schemes throughout the rest of the site as most colours won't
+clash with White so much. I wanted to use colours that would appeal to the target audience, so anglers, and what better colour than the colour
+they are mostly familiar with, dark Green. Most fishing products on the market such as bags, chairs, bivvys, umbrellas, etc. tend to be Green
+of some sort. The reason for this is to match in with the surroundings. I got further information for colours from a website called
+[Colours Wall](https://colorswall.com/palette/114299/), where I searched for colour palettes that were inspired by fishing, I came across one
+named Fly Fishing Dry Colour, which had a perfect Green #6a7225 that I chose to use throughout the site. I decided to use this colour
+specifically for elements such as buttons, banners, and icons. Font colour I decided to go for clarity so Black #000 has been used throughout
+the site. It believe it is the ideal font colour for this site due to the contrasting white background.
 
-The site only has one image which is the background image, apart from that I have also used [font awesome](https://fontawesome.com/) icons
-throughout the site as a visual aid for users.
+![Fishing Colour Palette](media/fishing-colour.png)
+
+The site has many images and have been referenced in the credits section of this document as to where they were obtained from. The product
+images were predominantly obtained from [Angling Direct](https://www.anglingdirect.co.uk/) and the events section images were obtained
+from multiple sources. All the images on this site have been chosen to fit their purpose as best as possible and relate to what they're
+paired with. I have also used [font awesome](https://fontawesome.com/) icons throughout the site, these can be seen in the header as
+navigation aids and in the contact app linking to social media pages. Font Awesome icons provide great visual aids that help users understand
+what they are being directed to without having to use words on some occassions.
 
 ## 2. Features
 
@@ -260,13 +287,17 @@ throughout the site as a visual aid for users.
 
 ---
 
+The site is made using Django framework which makes it easier to add and build upon the site, this is due to being able to create additional
+apps when there is a need to add additonal features to the site. The apps are linked together using Python language and models are created
+to perform functions.
+
 ### Base
 
-I created a template called base.html to hold all the content that will be displayed on each page of the site. This way I can use jinja
-templating language for all the other pages to inherit the code from base.html, then I only need to concentrate on the code/content
-specific to that page. The base.html template declares that it's a html document and houses the head element that contains all the link 
-tags for the site. The body element is also stored in base.html which contains the background image, the navbar/logo, mobile navbar and logo, 
-section for flash messages to display, the main element where content from other pages will be displayed and finally the script tags.
+I created a templates folder which houses the base.html which contains all the content that will be displayed on each page of the site.
+This way I can use jinja templating language for all the other pages to inherit the code from base.html, then I only need to concentrate
+on the code/content specific to that page. The base.html template declares that it's a html document and houses the head element that contains
+all the link tags for the site. The body element is also stored in base.html which contains the background image, the navbar/logo, mobile
+navbar and logo, the main element where content from other pages will be displayed and finally the script tags.
 
 The logo and navbar is displayed at the top of the page, the logo is centralised and acts as link back to the home page (words.html), the
 navbar is displayed on the right at the top, with the navigation button is order of relevance/most commonly used from left to right. All

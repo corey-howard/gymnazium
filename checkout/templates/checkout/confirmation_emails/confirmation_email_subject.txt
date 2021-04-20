@@ -1,1 +1,1 @@
-Gymnazium Confirmation for Order Number {{ order.order_number }}
+Gone Fishing Confirmation for Order Number {{ order.order_number }}
