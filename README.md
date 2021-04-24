@@ -293,65 +293,68 @@ to perform functions.
 
 ### Base
 
-I created a templates folder which houses the base.html which contains all the content that will be displayed on each page of the site.
+I created a templates folder which houses the base.html, this contains all the content that will be displayed on each page of the site.
 This way I can use jinja templating language for all the other pages to inherit the code from base.html, then I only need to concentrate
 on the code/content specific to that page. The base.html template declares that it's a html document and houses the head element that contains
 all the link tags for the site. The body element is also stored in base.html which contains the background image, the navbar/logo, mobile
 navbar and logo, the main element where content from other pages will be displayed and finally the script tags.
 
-The logo and navbar is displayed at the top of the page, the logo is centralised and acts as link back to the home page (words.html), the
-navbar is displayed on the right at the top, with the navigation button is order of relevance/most commonly used from left to right. All
-these features are responsive and work on different screen sizes, the navbar converts into a collapsable navbar when screen sizes become
-too small to display the full navbar.
+The logo is purely the name of the site and acts as a link to return back to the home page, with styling emphasis on the font, the word 'Gone'
+being italicised to represent movement as in going fishing. The logo sits top left of the site, but is hidden on smaller devices as there is
+no room. The shopping bag and account icons sit top right of the site and is ever present, continuously providing a running total of the
+customers order. In between both of these, centre of the site is the search bar, users can type in keywords to search for products for sale.
+Below all this is the navbar which spans horizontally across the site, the navigation buttons have been ordered in relevance/most commonly 
+used from left to right. The navbar will collapse into a burger style navigation menu on smaller screen sizes. The last feature of the header
+is the free delivery threshold message permanently displayed, this is to provide constant reminder of how much customers need to spend to
+receive free delivery, so is a prompt for customers to potentially spend more. All the features explained in this section are displayed on 
+each page of the site, all pages are extensions from base.html
 
 #### Home
 
-The main feature of the home page (words.html) is that of the dictionary of slang terms. As part of the UX it was important that users
-are able to obtain the information they desired from the very first page they encounter. Below the navbar the heading is displayed, this
-is to clarify what the site is for, as the site name does not neccessarily give a clear indication to what the site is. Following that is
-the alphabet running from A-Z, these act as links for users to quickly navigate through the dictionary, as most users will arrive at the
-site knowing what slang term they're looking for, they can click on the letter it begins with and will be navigated to that point. The
-slang term and their definitions are then displayed after the alphabet links, the slang terms are separated by a heading of each letter of
-the alphabet, these act as the scrollspy's. The slang entries are displayed in a materialize collapsable, so the slang term and it's
-definition are displayed, but when clicked on, the user who created the entry and the date it was created on are displayed. If a user is
-logged in to the site and have previously created a slang entry, an edit button will appear next to the entry, this will only appear to
-the user who has created the entry so other users cannot edit it. I decided against using a sticky navbar because I didn't believ it was 
-neccessary for the site, this is because there is only one main feature of the site which is the dictionary itself, so as a user is scrolling
-through the terms, it's not in their best interest to need to quickly navigate to another part of the site. With this being said, I did 
-believe it to be neccessary to have a function that will return the user to the top of the page at any point, so I created a floating action 
-button to achieve this.
+Below the header on the home page is the background image that spans the rest of the page. On top of the image is a navigational button
+'Shop Now' which directs customers to the products page. The slogan for the site is also displayed on top of the background image and has
+been styled to fade into view when the page loads, this is to highlight the three main functions of the site, to be able to shop, locate
+fisheries and connect via the events page, as mentioned previously, some of those functions are due in future developments.
 
 #### Log In
 
 The Log In page, quite self-explanatory, is the page where users who have already registered can log in using their credentials. This is
-comprised of a materialize form including two fields, one for username and one for password. The form uses pythons flask to check the users
-log in credentials match to those that are stored in the mongoDB database. There are two buttons below the form, one to log the user in, if
+comprised of a bootstrap form including two fields, one for username and one for password. The form uses pythons flask to check the users
+log in credentials match to those that are stored in the Postgres database. There are two buttons below the form, one to log the user in, if
 pressed and log in was successful, will redirect the user to the home page, if unsuccessful will return back to the log in page. The other 
-button is for incase the user found themselves on the log in page without actually registering, so clicking on the register button will take
-the user to the registration page.
+button is to return the user back to the home without wanting to login. There are also links that users can follow to register for an account
+if they have not already signed up already, and also a link to reset the users password if they have forgotten it. The forget password
+function works and users are actually able to successfully reset their password.
 
 #### Register
 
-The Register page is basically a carbon copy of the Log In page, apart from the flask code that governs it. When a user tries to create
-their username, it is checked to see if the username already exists and if so, returns the user back to the registration page to try again.
-Once the user has successfully registered via clicking the register button, it directs them to their profile page.
+The Register page is where users who have not already made an account on the site can do so. The page is made up of a bootstrap form where
+users are required to fill in their email, pick a username and password. Once they submit this form, an email is sent to them asking them to
+verify their email address, once this is verified, the users are able to return to the site and access their profile. The code for the
+submission form also checks if usernames and email addresses are already in use and issues a prompt to the user that this is the case.
 
 #### Profile
 
-The Profile page is quite simply a go to page for once the user has successfully registered, it takes them to their profile to show that
-their registration was a success. There is also a brief introduction to the site and a few rules for when adding slang entries to the site.
-It has quite a nice feature that displays the users name at the top of the page, this is achieved again by using jinja and targeting the
-username. I have tried torepeat this throughout when addressing the user directly by using their username. Below this are two navigation 
-buttons, one to take the user back to the home page, the other is the add slang button. Clicking this will take the user to the add slang page.
+The profile page is a a really useful tool for the users who hold an account on the site. Here you can see your saved delivery information,
+which can also be changed here, so when the user makes future purchases the delivery details field will be pre filled with the users
+information. Also, on the profile page users can view their purchase history. Everytime a user completes a transaction on the site, their 
+order summary will be visible in the purchase history section. More details can be obtained from the order history by clicking on the
+unique order number, this will open a new page which displays the transaction in more depth, then there are navigation buttons to return
+back to the profile or to the sites home page.
 
-#### Add Slang
+#### Product Management - Superuser access only
 
-The Add Slang page is where users that have logged in can access, here they can add slang entries for the dictionary. It is made up of a 
-simple materialize form, with two fields to be filled. One being the slang term and the other being slang definition. Both of which is linked 
-to the mongoDB collection for words under their respective id's of slang_term and slang_definition. Once the user has successfully created
-the slang term and it's definition, it is stored in the database and is inserted into the home page dictionary in alphabetical order, this
-has been achieved by sorting the data alphabetically in the python code. The users slang entries will be clearly visible as they will have
-an edit button next to them that only they can see.
+If logged in to the site and have admin access authorised then in the My Account section there is also a Product Management page, quite
+simply, users who are able to see this page is because they have admin authorisation. Which means they have access to add additional products
+to the ecommerce section of the site. On this the user is presented with a form where they can choose what category they want to add the
+new product to, then the details for the product can be inputted such as SKU code, price, description, image, etc. Once the form is submitted
+the new product is automatically added into it's designated category ready to view on the site.
+
+### All products
+
+The All Products section allows users to view all the products in the ecommerce store but can also be sorted via different means such as,
+price low to high, A-Z, rating, etc. Whatever option is chosen will take the user to the All products page, ordered by what the user chose.
+
 
 #### Edit
 
