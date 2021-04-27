@@ -1,6 +1,6 @@
 # Fourth Milestone Project - Gone Fishing
 
-![device-mockup](static/images/device-mockup.png)
+![device-mockup](media/gone-fishing-mockup.jpg)
 
 Welcome to Gone Fishing, a site to fulfill all the relevant needs for people who enjoy fishing. This site is for all degrees of
 fishing experience whether complete novice or expert, there are items to purchase for all levels of experience. A place to shop for
@@ -354,16 +354,46 @@ the new product is automatically added into it's designated category ready to vi
 
 The All Products section allows users to view all the products in the ecommerce store but can also be sorted via different means such as,
 price low to high, A-Z, rating, etc. Whatever option is chosen will take the user to the All products page, ordered by what the user chose.
+One the user is on the all products page, there is a drop down menu available at the top right hand side of the page, where the user can 
+change the order preference. There is also a button visible at all times at the bottom left of the page which will return the user to the top
+of the page once clicked.
 
+### Product Pages
 
-#### Edit
+Similar to the All products page, the site also categorises the ecommerce products. Firstly the products are categorised by type of fishing
+style and also products that don't fit into a style, so on the navigation bar this is what will be shown. The navigation bar has the options
+to shop products by Carp fishing, Coarse & Match fishing and lastly by Equipment that can be for all types of fishing styles. Each of these
+navigation buttons open up sub categories so users cna shop for fishing rods specifically for Carp fishing for example. The site is structured
+in this way due to believing this is how a customer would want to shop and also from researching other fishing ecommerce sites. When viewing
+the products pages the user can see an image, description, price, rating and what category the product is in. If the user is logged in and has
+admin priviledges then the option to edit and delete the products are visible to super users only. The Edit button will take the user to the
+edit product page where they can change all aspects of the product and even delete the product all together, which also deletes it from the
+database. When the user clicks on a product the user is taken to the product detail page which provides a more in depth description of the 
+product and the ability to add the product to the shopping bag along with choosing the quantity to add. This brings together all of the CRUD
+functionalities for the site, where we have covered the ability to create products in the product management page and django admin, the 
+availability to read and see the products, and lastly the ability to update and delete the products via the products pages.
 
-The final page of the site is the Edit Slang page, quite simply this is where users can edit the input fields of their entries, perhaps for
-if they've noticed spelling mistakes or maybe the definitipn isn't quite correct. The user can also delete their entry altogether. These
-changes first and foremost are made to the database, but as the data is retieved from the database, these changes will also appear on the site.
-These actions can be completed by pressing the edit slang button or delete slang button. If the user changes their mind they can press the
-cancel button, all 3 buttons available to the user on this page will redirect the user to the home page, following any changes they decided
-to make.
+### Events
+
+The events page is essentially a blog app, where the site owner can create posts in the django admin for the site users to read. The page is 
+structured using bootstrap card elements, which includes an image and a preview to the post anlong with the post heading and the author/created
+on date. All the information/data is gathered from the database using jinja, and can be pulled and displayed where appropriately needed to form
+the event posts. The main events page holds multiple card elements that depict each event posts, there is a button at the bottom of each post,
+'Read more' which when the user clicks on takes them to the events detail page. This page focuses on the selected post and displays the full
+article. At the bottom of the page there is a navigation button which will take the user back to the main events page. Only users with django
+superadmin credentials are able to create blogs within the django admin, here they are also able to edit existing event posts and even delete.
+
+### Contact
+
+The Contact app is a page where users can get in touch with the site/company owners in relation to any query they have and also get in touch
+via the company social media outlets, users can also locate where they can get in touch with the site owner via the google map feature. The 
+page is set out using a bootstrap form for the contact enquiry where all the fields link directly to the django admin. The user must fill in
+all fields in the form including, their name, email address, phone number and their message. Once the form is filled and submitted then the
+user is presented with a success toast message informing them their message was sent successfully and someone will respond shortly. In the
+backend, what happens is an email is sent to the site owner informing them that a message has been sent/from who and to view the message
+in the django admin. The message can be viewed in the Contact app in the django admin and the site owner can then respond to them via one
+of the details provided by the user that sent the message. Note: The social links are currently only set up to take the user to the
+coresponding social media outlet, as currently there are no social media pages set up for this company.
 
 ---
 
@@ -371,12 +401,19 @@ to make.
 
 ---
 
-As part of the UX I mentioned that it would be good to progress this site further in future developments, by intoducing a chat functionality
-between the users. This could be in the form of a forum or perhaps in the same concept of some social platform such as Facebook. This could
-be a place where users are encouraged to converse on the subjects surrounding London life, tourist attractions, places to eat, places to see.
-In a business sense, the site could introduce advertising for London tourist attractions, perhaps provide links to relevant sites to book
-tickets. If enough users participate in using the site, a brand could be developed and merchandise could possibly be sold, so an introduction
-of a site shop could be an idea.
+As mentioned previously in this document, there are a few features left to implement on this project. The Events app would ideally expand to
+become more of a place to chat between users, so a comments feature would be an addiitonal feature, where users can comment on the articles
+posted and converse with other users. There would also be generic posts such as 'Tips for Carp fishing' for example where users who wanted
+to contribute to that section can/users who want to get tips about that subject know to look there.
+
+Another feature that is planned to be introduced in the future is a Fisheries app, this would feature many fishing locations across the UK
+and provide in depth descriptions of each location. It will go into depth in relation to what fish are available, whether night fishing is
+permitted, on site facilities/amenities, parking and of course price list. This could also be an oppurtunity for the site to create additional
+revenue by building relationships with the UK fisheries and perhaps sell tickets through the site and take commission.
+
+These additional features would help create the culture for what the site aims to be, the central hub for all things angling. The aim would
+be for Gone Fishing to be the first place anglers would think to visit for all their angling needs and plan there whole trip/restock through
+the site.
 
 ## 3. Technologies Used
 
@@ -392,19 +429,25 @@ of a site shop could be an idea.
     * To use JQuery
 
 * Python:
-    * To import and use Flask and various functions, including jinja templating.
+    * To import and use Django and various functions, including jinja templating and implementing CRUD funtionality
 
 ### Libraries and Frameworks
 
-* Materialize v1.0.0: 
-    * Used for CSS shortcuts such as; Navbar, Cards, Forms, etc.
+* Bootstrap v4.4.1: 
+    * Used for CSS shortcuts such as; Navbar, Cards, Forms and styling, etc.
 
 * JQuery:
     * JQuery used for javascript functions as it is simple to use and reduces the amount of code needed. 
     Used for the mobile sidenav, collapsable sections and the floating action button.
 
-* Flask:
-    * Used Flask as it is a useful library that has an extensive category of Python functions for use.
+* MYSQLite:
+    * Used as a development database.
+
+* Postgres:
+    * Database used for deployed version of the site.
+
+* AWS:
+    * Amazon Web Services to hold and store all the media used for the site
 
 * Google Fonts: 
     * Used to change from default Fonts.
@@ -414,8 +457,8 @@ of a site shop could be an idea.
 
 ### Tools
 
-* MongoDB:
-    * Used to create database that will store the data for the site in collections created.
+* Stripe:
+    * Payment processing software implemented to take payments for the ecommerce store.
 
 * GitHub:
     * For hosting the website, version control of this repository using Git and source code management.
@@ -436,30 +479,106 @@ of a site shop could be an idea.
 
 ### User Stories
 
-* As a user I want to be presented with a simple, enjoyable and easy to use site, that is also visually appealing.
-    * *This has been achieved by having the slang terms available to the user via the very first page, there is minimal
-    content to have to digest beforehand as well. The site only includes pages that are neccessary, which reduces it's
-    complexity to the user, allowing them to concentrate on the pages that are relevant to them. Humour has 'attempted'
-    to be injected into the site via the Flash messages, by including cockney rhyming slang into these messages. The
-    colour scheme is appropriate and clear for the user to see without clash.*
-* As a user I want to be able to navigate around the site with ease.
-    * *This has been achieved by having a navbar at the top of the page with links to pages only relevant to the user.
-    Floating action button has also been added on the home page that takes the user to the top of the page from whatever
-    point they are currently at.*
-* As a user I want to be able to easily find the slang term I am looking for, via a logical ordering system.
-    * *This has been achieved by including an alphabet from A-Z at the top of the page, users can click on a letter
-    of their choice and will be taken to said letter that slang terms begin with. The slang terms have also been ordered
-    alphabetically for users to easily find the term they are looking for.*
-* As a user I would like the option to add to the dictionary of slang terms.
-    * *This has been achieved by including an option for users to register an account with the site, they can then log in
-    and add a slang term with it's definition.*
-* As a user I want to have access to the slang terms/defintions i've created and have the option to edit/remove them.
-    * *This has been achieved by including an edit button next to all slang terms that the user who is logged in has created.
-    By clicking on the button, the user has the option to edit and even delete the entry if they wish.*
-* As a user I want to enjoy using the site enough to want to return.
-    * *This has been achieved by the website being more of a service to users, if a user happens to need to know the definition
-    of a slang term then they know they can return to the site. Hopefully the content, ease of use and injection of humour makes
-    enough of an impact for the users to want to return.*
+Throughout creating this project I made sure I referred to the user stories created for this site to ensure they were complied with. Testing
+of this site involved a mixture of making sure the user stories were able to be acomplished and many other factors such as constantly checking
+responsiveness and checking written code for errors and compliance. To start with, I have tested the site by attempting to achieve the user
+stories and the results can be seen below. As reference, I have named each test in relation to the User story ID displayed in the table
+displayed earlier in this document under [User Stories](#user-stories).
+
+* User ID 1:
+    * *Checked all products pages and filtering features, all work and display well. Products can be successfully added to shopping bag to
+    be purchased.*
+* User ID 2:
+    * *Went onto all the stores products detail pages and all display correct informtaion to the user.*
+* User ID 3:
+    * *Trialled adding products to shopping bag and navigated through all othe rpages on site, the bag total was always on display for the user
+    throughout the site.*
+* User ID 4:
+    * *On the home page as a user I can easily identify where the Events page is via the navigation bar.*
+* User ID 5:
+    * *This user story can not be achieved as it is part of future developments as stated.*
+* User ID 6:
+    * *Registered for an acoount, was sent an email to verify that the email address belonged to me, followed the link in the email and it
+    successfully directed me to the Gone Fishing home page as expected. When logged in to site, was able to access the profile page under
+    My Account.*
+
+    ![Registration Verification](media/registration-verification.jpg)
+
+* User ID 7:
+    * *Can easily log in and out and access personal account information.*
+* User ID 8:
+    * *Navigated to log in page and clicked on forgot password link, entered email address and submitted the form. Was sent an email with
+    a link to reset the password, follwoed the link and successfully changed my password and had access again to account.*
+* User ID 9:
+    * *This has instead been achieved via a toast message that appears once the registration has been completed, highlighting that the user
+    will receive an email to confirm registration.*
+* User ID 10:
+    * *After completing a transaction, viewed user profile page whilst logged in, can see order history/transactions and payment information
+    has been saved to the profile for future use.*
+* User ID 11:
+    * *As a user I can access the event posts and keep up to date with angling news. When click on invidiual posts the user is taken to the
+    events detail page showing the post in more depth and the back button successfully takes user back to the Events main page.*
+* User ID 12:
+    * *This user story can not be achieved as it is part of future developments as stated.*
+* User ID 13:
+    * *This user story can not be achieved as it is part of future developments as stated.*
+* User ID 14:
+    * *This user story can not be achieved as it is part of future developments as stated.*
+* User ID 15:
+    * *On the  All products pages I used all the filter options and they sorted the products correctly.*
+* User ID 16:
+    * *Went into a specific product category and used sorted the products via the options within the category sorting, all options presented
+    the data in the correct format chosen.*
+* User ID 17:
+    * *This can be achieved in the All Products page and works successfully.*
+* User ID 18:
+    * *In the search bar, I searched for keywords that I knew were in the product description or name and the correct results were gathered. I
+    also searched for keywords that I knew were not in any of the products description or name and was presented with "0" results found.*
+* User ID 19:
+    * *When searching for products using the search bar, successful search results shows the products that obtain the key word searched and
+    the user can also see how many results have been gathered. The user can also purchase the product from the results gathered if they wish.*
+* User ID 20:
+    * *Tested selecting a product to add to the shopping bag and used the quantity +/- buttons, adding the product to the bag worked successfully.*
+* User ID 21:
+    * *Once I added products to the shopping bag, I clicked on the shopping bag and it successfully took me to the shopping bag page so can see
+    the products added in detail.
+* User ID 22:
+    * *In the shopping bag I adjusted the quantity of products, either by increment or decrement by using the update function, both worked
+    successfully. The remove funcion also works perfectly fine.
+* User ID 23:
+    * *Made a purchase as a user, inputted personal delivery details and entered the Stipe test payment number in the card number field, all
+    worked successfully. I was directed the payment success page where a breakdown of the order is displayed and a toast message displays
+    describing the payment was successful. Was sent a confirmation email with all the details of my order. The checkout was quick and easy
+    and the button to navigate back to the homepage works successfully.*
+
+    ![Stripe Payment Success](media/payment-success.jpg)
+
+* User ID 24:
+    * *Through the checkout process as a user I would feel that my perosnal details are secure as they can only be seen via my profile, and
+    also you have the option to not save the details for next time if you decide not to. There is also no evidence to show that the card
+    details appear anywhere else such as on the confirmation emails or left to see on other pages.*
+* User ID 25:
+    * *After checkout user is presented with the order confirmation where they can check if they've made any mistakes and can get in touch
+    with the site if they have.*
+* User ID 26:
+    * *Confirmation email was received after successfully checking out.*
+* User ID 27:
+    * *Whilst logged in as a super user, navigated to the product management page, filled in all the relevant fields in the form and product
+    was added successfully. Adding products in the django admin also works fine.*
+* User ID 28:
+    * *When in the products pages and logged in as a super user, there are 2 options available to the user, edit and delete. Clicked on the
+    edit button on one of the products and tested updating some of the fields, changes saved and implemented successfully. Editing products 
+    in the django admin works fine too.*
+* User ID 29:
+    * *When in the products pages and logged in, pressed the delete button on one of the products and the product was removed from the site
+    and database successfully. Future improvements needed for this, such as a prompt to ask the user if they are sure they want to delete
+    the product, as at the moment pressing the delete button deletes it without warning. Deleting products in the Django admin works fine too.*
+* User ID 30:
+    * *Events posts can only be added in the django admin, navigated to the events section in the admin and filled in the relevant fields
+    and successfully created an event post.*
+* User ID 31:
+    * *Sent a message in the contact page then accessed the django admin, navigated to the contacts app and the message is displayed
+    successfully here for the admin to reply how they wish.*
 
 ### Responsive Design
 
@@ -468,12 +587,12 @@ this by using Chrome Dev tools, once I implemented a feature I would then check 
 if there was an issue I would fix it there and then before moving on. You can see examples of how the site looks on different screen
 sizes in the examples below:
 
-* For screens at 1440px click [here](https://photos.google.com/photo/AF1QipPYgeLtRtc-9oKcB0p9jpgbHRFge00axsWqeXWJ)
-* For screens at 1024px click [here](https://photos.google.com/photo/AF1QipPJIN5TR4jRCFKNkj5Xa_ki-V1P7GATUxvejIv4)
-* For screens at 768px click [here](https://photos.google.com/photo/AF1QipM3rzP18WSJpOhiYL6PHmsy29D8wc9O9hK1eIEC)
-* For screens at 425px click [here](https://photos.google.com/photo/AF1QipMBpLN754EPerH3aL-QRsL29SDEzVpGajqXmDMN)
-* For screens at 380px click [here](https://photos.google.com/photo/AF1QipPw0FpIhQiSGCdlrIdOpTKn-4q6Mh1NCM0_Dge0)
-* For screens at 320px click [here](https://photos.google.com/photo/AF1QipOt_ui5ZoRY352q49wkhL_T9ACH3-vZmnLxOYzM)
+* For screens at 1440px click [here](https://photos.google.com/photo/AF1QipOi3t-CEY2QkciIdKmN1IQZK9ynrkGnPHqolWCD)
+* For screens at 1024px click [here](https://photos.google.com/photo/AF1QipO4csru0GVVOl4gN7aUp6Hm7nTJxGW9z-HFM-y6)
+* For screens at 768px click [here](https://photos.google.com/photo/AF1QipMBeKsV1nPkuveggvUAdOakEi-ktx77Z1e6HgQA)
+* For screens at 425px click [here](https://photos.google.com/photo/AF1QipN3GgSM_8g3y_s07AjUWHGIqFcj8R-toqxVLcQ8)
+* For screens at 380px click [here](https://photos.google.com/photo/AF1QipNsghd_TXqz82HIXt3psc-MWjUUabYqLd2YzKLj)
+* For screens at 320px click [here](https://photos.google.com/photo/AF1QipNekntxGgTvkfFFWXvba-7k7laMPfJPeubPwv3Y)
 
 I also tested my sites responsiveness on a two websites such as [Am I responsive?](http://ami.responsivedesign.is/#) Which I used to create
 my device mockup image also. The second site being [Responsive Design Checker](https://responsivedesignchecker.com/), which is where I 
@@ -483,10 +602,9 @@ physically checked to see how this website looked and worked on a wide variety o
 
 I used [Browserstack](https://www.browserstack.com/) to check how compatable this site was on the major internet browsers including Chrome, 
 Edge, Mozilla, Opera, Safari and Internet Explorer. The site worked perfectly fine on all these browsers and their editions, I could not 
-find any faults when testing button, links, forms, mobile navbar, and the site appeared to run smoothly throughout all tests. 
+find any faults when testing buttons, links, forms, mobile navbar, and the site appeared to run smoothly throughout all tests. 
 
-I also used Browserstack to see how well the site worked on
-different desktop, mobile and tablet devices. On the vast majority of devices the site worked perfectly well, however, I did spot a strange
+I also used Browserstack to see how well the site worked on different desktop, mobile and tablet devices. On the vast majority of devices the site worked perfectly well, however, I did spot a strange
 fault that only occured in iphones. The error is the background image does not stay fixed, so as you scroll down the page eventually the
 background image disappears, you can see the bug [here](https://photos.google.com/photo/AF1QipPtwbJIR6mFdE5NEBiYmbP2hWqD6SsH0qcdt1-h).
 I done some more tests to narrow down the root device/browser that might be the cause, upon further investigation, it appears that the
@@ -496,11 +614,6 @@ like having this bug present, the only way I currently know how to resolve this 
 fixed property and then repeat the image. I have made the difficult decision not to do this, reason being, I believe there is
 probably a better way to resolve it without ruining the site for all other tablets/mobiles that the site works perfectly fine on. Once
 I figure out how to resolve this, then I will.
-
-*__UPDATE: I managed to resolve the background image bug. This was achieved by loosely following the solution I outlined above, but Instead
-of removing the background-attachment: fixed; css styling in media queries, I just changed the background-repeat styling rule to repeat. I
-thought if the background image is fixed on the vast majority of devices then I don't have to worry about the image repeating as it will be
-fixed, but now the image will repeat on iphones and ipads, as the background-attachment: fixed styling rule does not work on these devices.__*
 
 ### Bug Fixes
 

@@ -494,3 +494,9 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
+
+@media (max-width: 350px) {
+    .order-number {
+        font-size: small;
+    }
+}
