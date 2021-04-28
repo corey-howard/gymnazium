@@ -19,6 +19,21 @@ site to be more than a shop, and to reflect other aspects of the sport, which is
 locations sections came in. The aim would be to eventually have this site be the hub for all things angling and the got to place to shop,
 locate and connect.
 
+Before I go any further I would like to address something that may be obvious already. I originally started this project under a different
+aim/objective, I set off creating a Gym based website, named Gymnazium. At the beginning of this project I was not sure what direction to go
+and had no clear vision of what sort of site I wanted to make, whereas in my previous projects I had an idea breing long before starting each
+milestone project. In the end I decided to create a gym based site upon the recommendations Code Institute provide for project ideas. I
+planned and designed what I wanted to do for the site and started making it, it wasn't until quite far into the project I thought of, in my
+opinion, a really good site that I became quite passionate about. I even thought of many more extra models that I could implement to my new
+project idea and I could also adapt my new idea to fit around what I had created already for Gymnazium. This is where Gone Fishing came to
+fruition. At this point though I had the name Gymnazium embedded in already in many sites and database names, such as AWS, Heroku, Django
+startapp name and of course the Github repo. I researched how difficult/if even possible to change the django app name and all other
+assiotiations with Gymnazium, it became apparent that it could uncover all sorts of difficulties and complications. I seeked advice from my
+mentor and Tutor support on this issue and all recommended I kept the name Gymnazium where it has already been used, and just change the live
+site to the new project name that the user will see. I agreed that this was the best option due to current time restraints I did not want to
+add any further complications that could break the site I had already started to create. Going forward, when I am not subject to a deadline,
+I will go through this project and change all references from Gymnazium to Gone Fishing.
+
 ## Table of Contents
 
 1. [UXD - User Experience Design](#1.-uxd---user-experience-design)
@@ -228,10 +243,6 @@ The site requires a database to hold much of it's data such as the product infor
 Postgres relational database with a data model. However, due to this project being deployed using Heroku, I was able to use SQLite during
 development and Heroku Postgres when deployed. All the data is contained within the Postgres database and the appropriate models have been 
 created.
-
-The below diagram explains the structure of my database and how it conforms:
-
-
 
 #### Wireframes
 
