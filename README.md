@@ -236,7 +236,7 @@ focusing on. Chart made using [Lucid Charts](https://www.lucidchart.com/pages/).
 
 I used Wireframes when designing how the information will be represented and how the user will be able to navigate across the site.
 Once the wireframes were created, I had a clear drirection on where to begin creating the site and what pages should be created thereafter.
-The wireframes for this site can be found here:
+The wireframes for this site can be found in the wireframes folder in this repository
 
 
 The site requires a database to hold much of it's data such as the product information/images, event articles, etc, the database used is the
@@ -250,8 +250,11 @@ Prior to starting this project I created Wireframes using an extension on Micros
 the site would look before writing any code and also was a way to plan out how the apps and pages within the site will link to each other.
 This saved a lot of time as it was quicker to plan and make changes to wireframe designs than experimenting whilst coding. Although my project
 idea changed halfway through from a gym site to Fishing site, the wireframes were practically the same apart from the additional models Away
-from the ecommerce part of the site so my wireframes were changed to reflect this. You can find the pdf file to my Wireframes in the
-Wireframes folder of this repository.
+from the ecommerce part of the site so my wireframes were changed to reflect this. I used a mobile first design approach and then adapted
+for larger devices thereafter, mostly by using bootstrap device size features and css media queries. Within the wireframes document you will
+notice that I have designed how the site would be displayed on mobile device screen size and laptop screen size, I have purposely not created
+designs for tablet size as it will follow either the mobile design or desktop design depending on what works best. You can find the pdf file 
+to my Wireframes in the Wireframes folder of this repository.
 
 ---
 
@@ -613,50 +616,39 @@ physically checked to see how this website looked and worked on a wide variety o
 
 I used [Browserstack](https://www.browserstack.com/) to check how compatable this site was on the major internet browsers including Chrome, 
 Edge, Mozilla, Opera, Safari and Internet Explorer. The site worked perfectly fine on all these browsers and their editions, I could not 
-find any faults when testing buttons, links, forms, mobile navbar, and the site appeared to run smoothly throughout all tests. 
-
-I also used Browserstack to see how well the site worked on different desktop, mobile and tablet devices. On the vast majority of devices the site worked perfectly well, however, I did spot a strange
-fault that only occured in iphones. The error is the background image does not stay fixed, so as you scroll down the page eventually the
-background image disappears, you can see the bug [here](https://photos.google.com/photo/AF1QipPtwbJIR6mFdE5NEBiYmbP2hWqD6SsH0qcdt1-h).
-I done some more tests to narrow down the root device/browser that might be the cause, upon further investigation, it appears that the
-only devices it affects are iphones and ipads (which is quite broad), and it doesn't matter what browser, the bug appears on both Chrome
-and Safari. I thought this must be all Apple products then, but when I tested on Mac devices, this bug wasn't there. As much as I don't
-like having this bug present, the only way I currently know how to resolve this is by using media queries and removing the CSS background-
-fixed property and then repeat the image. I have made the difficult decision not to do this, reason being, I believe there is
-probably a better way to resolve it without ruining the site for all other tablets/mobiles that the site works perfectly fine on. Once
-I figure out how to resolve this, then I will.
+find any faults when testing buttons, links, forms, mobile navbar, and the site appeared to run smoothly throughout all tests.
 
 ### Bug Fixes
 
-When user added slang term and definition to the site/database, upon page reloading, the slang term had been created successfully but 
-the definition was showing as 'None'. 
-See code where bug was found [here](https://photos.google.com/search/_tra_/photo/AF1QipOV9v2UV1f9gGjXTTmPIrD1zi7fkJss4SQab77w)
-Image of bug on live site [here](https://photos.google.com/search/_tra_/photo/AF1QipNZBpRea9erDs8FKK4yk3lDMHdfa525Yg1Td5OR)
-Upon investigation, there were no errors but there was a mistake in the app.py file under the app.route declaration. Instead of 
-request.form.get("slang_definition) I had written, request.form.get("slang_description"). Was difficult to spot but I discovered it eventually.
+Update: Further testing using Browserstack did uncover a bug that is only present on tablet screen sizes. The bug is that when on tablet
+screen size, in the hamburger navbar for some reason the 'Home' option is not visible. I have noticed this bug quite late on/close to
+submission, I hope to resolve this before submission. First thoughts I am presuming it has something to do with either a media query or
+a style class that is not allowing 'Home' to be viewed. Clearly this is quite a significant bug as the user has no way of returning to the
+home page without pressing the back button in the browser, so will aim to fix.
 
-I realised last minute before submitting this project that my code was missing quite a key component. When users add a slang term, it would
-only appear on the site if it began with a capital letter, due to the jinja if statement only retrieving slang terms beginning with 'A', 'B',
-'C', etc. That has now been resolved. However, any slang terms added to the site starting with lowercase, is not sorted alphabetically. If
-I had more time I would be able to resolve this. I have attempted to resolve this by adding to the python code within the sort() function
-key=str.lower, which upon research should sort the words alphabetically regardless of the word starting with an uppercase or lowercase letter.
-Unfortunately, I could not get this to work in time before submission, so is left as a bug.
+![Tablet Navbar missing Home button](media/tablet-navbar.jpg)
 
 ### Online Validators
 
 * To test my HTML code for errors I used the [Nu HTML Checker](https://validator.w3.org/nu/).
-    * The test returned many errors, but were all for duplicate ID's which I believe is caused by the looping over by Jinja. The ID's it
-    seems, are within the jinja loop, I can't think of a solution around this so will note that it is an issue here currently, but will
-    continue to actively try and resolve. Perhaps changing the ID's to class rules instead.
-    UPDATE 12/01/21: It looked like changing the ID's into class rules is a solution that will work, however there is currently a GitPod
-    issue, where code is not updating to the local preview so I am unable to see if the changes i'm making work. As the project submission
-    date for this project is 13/01/21, I don't want to run the risk of breaking this project over a bug at this moment in time.
+    * The test returned a few errors, some of which were for the same user-id used more than once which were fixed. There is an error that
+    appears more than once which is in relation to <li> element shouldn't be the child of a nav element. This is the way it has been taught
+    at times in this course, being so close to submitting the project I feel that I may not be able to resolve this issue at risk of breaking
+    the site. If I were to attempt to fix the error I would perhaps look into wrapping the <li> within <ul> as the parent, but not sure how 
+    this will affect the functionality of the navbar, but will look into once project is submitted. 
+
+    ![HTML Error](media/html-errors.jpg)
+
 * To test my CSS code for errors I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
-    * The test returned no errors, but did however return many warnings, all for Materialize as it appears unknown to this validator tool.
+    * The test returned a few errors, most of which I was able to fix, however I am left with the following errors which I have not been able
+    to quickly resolve/know how to without investing much time in researching how to fix.
+
+    ![CSS Error](media/css-errors.jpg)
+
 * To test my JavaScript code for errors I used the [JS Hint](https://jshint.com/).
     * The test returned no errors or warnings.
 * To test my Python code for errors I used the [PEP 8 Online validator](http://pep8online.com)
-    * The test returned no errors or warnings.
+    * The test returned many errors. A lot have been resolved, but there are still lot's present due to lack of time to fix them all.
 
 ## 5. Deployment
 
@@ -666,16 +658,16 @@ This project was developed using Gitpod, committed to Git and pushed to GitHub f
 
 To clone this project from GitHub:
 
-1. Follow the link which will take you to this projects [GitHub repository](https://github.com/corey-howard/chew-the-fat).
+1. Follow the link which will take you to this projects [GitHub repository](https://github.com/corey-howard/gymnazium).
 2. Under the repository name in the 'Code' action button locate the clone HTTPS.
-3. Copy the clone URL for the repository which is https://github.com/corey-howard/chew-the-fat.git.
+3. Copy the clone URL for the repository which is https://github.com/corey-howard/gymnazium.
 4. In your local IDE open Git Bash.
 5. Change the current working directory to where you want the cloned directory to be created.
 6. Type, git-clone, and paste the URL for this repository.
 
 To download the code from GitHub:
 
-1. Follow the link which will take you to this projects [GitHub repository](https://github.com/corey-howard/chew-the-fat).
+1. Follow the link which will take you to this projects [GitHub repository](https://github.com/corey-howard/gymnazium).
 2. Under the repository name in the 'Code' action button click on Download ZIP.
 3. Choose the directory you wish to download it to.
 4. Unzip the file and then it is available to use.
@@ -694,13 +686,7 @@ You will also need to recreate the database in MongoDB.
 7. On the Heroku app dashboard, click on 'Settings' and then 'Reveal Config Vars'
 8. Set the following config vars:
 
-Key | Value
---- | ---
-|   IP             |   0.0.0.0                                                                                                       |
-|   MONGO_DB_NAME  |   cockney_rhyming_slang                                                                                         |
-|   MONGO_URI      |   mongodb+srv://root:r00tUser@myfirstcluster.9mrfl.mongodb.net/cockney_rhyming_slang?retryWrites=true&w=majority|                       |
-|   PORT           |   5000                                                                                                          |
-|   SECRET_KEY     |   < create your own >                                                                                           |
+![Heroku Config vars](media/config-vars.jpg)
 
 9. On the dashboard under deploy, click on 'Deploy Branch'. Once this is completed you can open the app.
 
@@ -708,25 +694,10 @@ Key | Value
 
 ### Content
 
-This project inlcudes some concepts from the Code Institute tutorial for the flask task manager mini project. When I was completing that
-tutorial I had already looked ahead to what the requirements were for this MS3 project and made extensive notes whilst completing the
-tutorial. It was also my first time using Materialize, which I grew very fond of using, due to it's ease of use and sleek look, which
-swayed me to use instead of Bootstrap.
-
-For the login/creating user and profile sections of this project I did require help in achieving this by refering to the tutorial video
-as I could not think of another way of achieving this.
-
-Home page h1 fade in:
-
-https://codepen.io/shawkdsn/pen/haGzE
-
-Cockney rhyming slang terms
-
-https://happy2movelondon.co.uk/complete-dictionary-of-cockney-rhyming-slang/
-
-Blog Articles used from:
-
-https://anglingtrust.net/news/
+This project include concepts from the Code Institute tutorial for the Boutique Ado full stack framework project. When I was completing that
+tutorial I had already looked ahead to what the requirements were for this MS4 project and made extensive notes whilst completing the
+tutorial. I referenced the videos for the Boutique Ado for many of the features present in this project and helped me in creating additional
+models.
 
 ### Media
 
@@ -762,32 +733,43 @@ Google Maps
 
 https://www.google.co.uk/maps
 
+Blog Articles used from:
+
+https://anglingtrust.net/news/
+
+Creating the Events app
+
+https://www.youtube.com/watch?v=m3hhLE1KR5Q&t=258s
+
+https://djangocentral.com/building-a-blog-application-with-django/
+
+Creating the contact app
+
+https://www.udemy.com/course/python-django-dev-to-deployment/learn/lecture/12056500#overview
+
 ### Research Tools/Help Guides
 
 PEP 8 compliance
 
 https://www.python.org/dev/peps/pep-0008/
 
+Home page h1 fade in:
 
-### Acknowledgements
+https://codepen.io/shawkdsn/pen/haGzE
 
-I would like to thank the Code Institute and their team of content Tutors, Support Tutors and Student Care Team for all their help and
-support during/before this project. It is by their teaching and guidance that I am fulfilling a passion to learn web development.
+FONTS
+https://fonts.google.com/
 
-Special mention to my mentor Gerald McBride, for his sage wisdom and undoubted encouragement. Thank you for your guidance throughout
-this project and being available for support when I need it.
-
-A big thank you again to Stuart Crang from Learning People, for helping me start this journey and for the useful information/
-advice you share on LinkedIn.
-
-Lastly, to my peers on Slack and LinkedIn, thank you for troubleshooting tips, coding advice and for bouncing ideas off each other.
-
+EMAIL HOSTING
+https://www.ionos.co.uk/
 
 IMAGE LINKS
+
 https://www.muscleblitz.com/gym-background-wallpaper-8
 https://www.shutterstock.com/
 
 BLOG IMAGES
+
 http://www.fishomania.net/gallery/nggallery/page/2
 https://www.forensisgroup.com/can-an-environmental-expert-testify-on-tclp-in-a-sewage-discharge-case/
 https://www.thetimes.co.uk/article/why-i-want-the-monster-fish-story-to-be-a-whopper-k67smb7pp
@@ -798,6 +780,7 @@ https://www.treehugger.com/largest-freshwater-fish-in-the-world-4869287
 https://tnc.news/2020/06/29/environment-minister-to-let-municipalities-dump-raw-sewage-into-waterways-until-2040/
 
 PRODUCT IMAGE LINKS
+
 Manilla Boilies: https://www-anglingdirect-co.uk.imgeng.in/media/catalog/product/cache/e2e09cb9e3f3e81e7a4cf8dbd1821470/s/t/sticky_baits_manilla_shelf_life_boilies.jpg
 Nash Scopex Squid Boilies: https://www-anglingdirect-co.uk.imgeng.in/media/catalog/product/cache/b0feda7636da30efa34d4678755a2414/N/a/Nash_Scopex_Squid_Stabilised_Boilies_1.jpg
 Freezer range boilies: https://www-anglingdirect-co.uk.imgeng.in/media/catalog/product/cache/e2e09cb9e3f3e81e7a4cf8dbd1821470/m/a/mainline_cell_freezer_boilies.jpg
@@ -887,9 +870,15 @@ Nisa cage: https://www-anglingdirect-co.uk.imgeng.in/media/catalog/product/cache
 Super crush ground bait: https://www-anglingdirect-co.uk.imgeng.in/media/catalog/product/cache/e2e09cb9e3f3e81e7a4cf8dbd1821470/s/o/sonubaits_spicy_meaty_method_mix.jpg
 Dynamite sweetcorn: https://www-anglingdirect-co.uk.imgeng.in/media/catalog/product/cache/e2e09cb9e3f3e81e7a4cf8dbd1821470/d/b/db_xl_plain_sweetcorn_tin_jpg.jpg
 
+### Acknowledgements
 
-FONTS
-https://fonts.google.com/
+I would like to thank the Code Institute and their team of content Tutors, Support Tutors and Student Care Team for all their help and
+support during/before this project. It is by their teaching and guidance that I am fulfilling a passion to learn web development.
 
-EMAIL HOSTING
-https://www.ionos.co.uk/
+Special mention to my mentor Gerald McBride, for his sage wisdom and undoubted encouragement. Thank you for your guidance throughout
+this project and being available for support when I need it.
+
+A big thank you again to Stuart Crang from Learning People, for helping me start this journey and for the useful information/
+advice you share on LinkedIn.
+
+Lastly, to my peers on Slack and LinkedIn, thank you for troubleshooting tips, coding advice and for bouncing ideas off each other.
